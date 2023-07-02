@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*arriere plan*/
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/background.png) ;
+    background-size: cover;
+    background-position: center;
+}
+.banner2{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/background2.png) ;
+    background-size: cover;
+    background-position: center;
+}
+/**/
+/*barre de navigation*/
+nav{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+    border-radius: 90px;
+    box-shadow: 2px 2px 2px 2px rgb(118, 117, 117);
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #e4e4e4;
+    text-transform: uppercase;
+}
+nav ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fee5fa;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.active{
+    border-bottom: 3px solid #fee5fa;
+    padding: 8px;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+/**/
+/*contenu*/
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #e4e4e4;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding:15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fee5fa;
+    background: transparent;
+    color: #e4e4e4;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+button span{
+    background-color: #805679;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+.photos{
+    width: 90%;
+    padding: 70px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+.pic{
+    position: relative;
+    height: 70%;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px rgb(123, 120, 120);
+    cursor: pointer;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: .5s;
+}
+.pic::before{
+    content: "Copy #";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fee5fa;
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    margin-top: -100px;
+    opacity: 0;
+    transition: .3s;
+    transition-delay: .2s;
+    z-index: 1;
+}
+.pic:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+    height: 0;
+    background-color: rgba(0,0,0,.4);
+    transition: .3s;
+}
+.pic:hover:after{
+    height: 100%;
+}
+.pic:hover::before{
+    margin-top: 0;
+    opacity: 1;
+}
+.map{
+    box-shadow: #9c9b9b;
+    display: flex;
+    justify-content: center;
+}
+/**/
+/*footer*/
+footer{
+    background-color:#070707;
+    width: 100%;
+    padding: 70px 38px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.insta {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.insta a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #fee5fa;
+    margin: 10px;
+    border-radius: 50%;
+}
+.insta a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+.insta a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.insta a:hover i{
+    color:#fee5fa;
+    transition: 0.5s;
+}
+.footerbottom {
+    display: flex;
+    justify-content: center;
+    color: #fee5fa;
+    font-family: script;
+}
+.design{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+/**/
